@@ -8,11 +8,11 @@ internal class Program
         var builder = WebApplication.CreateBuilder(args);
 
         // Add services to the container.
-
         builder.Services.AddControllers();
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
+        builder.Host.UseSystemd();
 
 
         var services = builder.Services;
@@ -24,6 +24,7 @@ internal class Program
         services.AddAuthorization();
 
         var app = builder.Build();
+
 
 
 
