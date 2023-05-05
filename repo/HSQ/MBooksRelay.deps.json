@@ -1,0 +1,41 @@
+  {
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "MBooksRelay/1.0.0": {
+        "dependencies": {
+          "NetCoreServer": "6.7.0"
+        },
+        "runtime": {
+          "MBooksRelay.dll": {}
+        }
+      },
+      "NetCoreServer/6.7.0": {
+        "runtime": {
+          "lib/net6.0/NetCoreServer.dll": {
+            "assemblyVersion": "6.7.0.0",
+            "fileVersion": "6.7.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MBooksRelay/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NetCoreServer/6.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-chLd65iEmnD2n+H/Kv6ZR9QrDvCE045t8+LHK5enNq26iPXFkg45mJb3YZVFZuH5QHgv/7Fd63LB0MIn24bwEA==",
+      "path": "netcoreserver/6.7.0",
+      "hashPath": "netcoreserver.6.7.0.nupkg.sha512"
+    }
+  }
+}
