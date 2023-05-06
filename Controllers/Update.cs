@@ -43,8 +43,8 @@ namespace MUpdater.Controllers
 
 
             var data = Directory.EnumerateFiles(path, "*.*", new EnumerationOptions() { RecurseSubdirectories = true })
-                    .Select(x => x.Replace("\\", "/").Replace(path, ""))
-                    .Where(x => pFiles.Count == 0 | (pFiles.Count > 0 && pFiles.Any(y => x == y.Replace("\\", "/"))))
+                    .Select(x => x)
+                    .Where(x => pFiles.Count == 0 | (pFiles.Count > 0 && pFiles.Any(y => x.Replace("\\", "/").Replace(path, "") == y.Replace("\\", "/"))))
                     .Select(x =>
                        {
                            var info = new FileInfo(x);
