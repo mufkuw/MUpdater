@@ -77,7 +77,7 @@ namespace MUpdater.Controllers
 
         public async Task<IActionResult> ZipedUpdateResult(string pScope, IEnumerable<string> pFiles)
         {
-            string path = $"{base_path}/{pScope}/";
+            string path = $"{base_path}/{pScope}";
             using (var zip_stream = new MemoryStream())
             {
                 using (var archive = new ZipArchive(zip_stream, ZipArchiveMode.Create, true))
