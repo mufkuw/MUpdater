@@ -63,7 +63,7 @@ namespace MUpdater.Controllers
         [HttpPost("{pScope}/Fetch")]
         public async Task<IActionResult> FetchFilesAsync(string pScope, [FromBody] List<string> pFiles)
         {
-            string path = $"{base_path}/{pScope}";
+            string path = $"{base_path}/{pScope}/";
             if (!SysIO.Directory.Exists(path)) return NotFound();
 
             var files = Directory.EnumerateFiles(path, "*.*", new EnumerationOptions() { RecurseSubdirectories = true })
