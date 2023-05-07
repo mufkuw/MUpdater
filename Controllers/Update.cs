@@ -85,7 +85,7 @@ namespace MUpdater.Controllers
                     foreach (var file in pFiles)
                     {
                         // Add the file to the zip archive
-                        var name = file.Replace(new DirectoryInfo(path).FullName + "\\", "");
+                        var name = file.Replace("\\", "/").Replace(new DirectoryInfo(path).FullName.Replace("\\", "/"), "");
                         var entry = archive.CreateEntry(name + ".mbooks");
 
                         using (var entry_stream = entry.Open())
